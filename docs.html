@@ -27,35 +27,114 @@
   </nav>
 
 <section class="docs-section">
-  <h2>Documentation</h2>
-  <p class="muted">Learn how MyTone AI works and how to use the audio features.</p>
+  <h2>MyTone AI Documentation</h2>
+  <p class="muted">
+    Official documentation for MyTone AI — from basic text-to-speech to advanced
+    voice modeling (frontend validation stage).
+  </p>
 
+  <!-- ===================== -->
+  <!-- OVERVIEW -->
+  <!-- ===================== -->
   <div class="doc-block">
-    <h3>Getting Started</h3>
-    <p>MyTone AI allows you to convert text to voice using tones & emotions.</p>
+    <h3>What is MyTone AI?</h3>
+    <p>
+      MyTone AI is an experimental voice platform focused on tone, emotion,
+      and voice behavior modeling.  
+      Current versions validate UX, control flow, and user expectations
+      before real backend voice cloning is introduced.
+    </p>
   </div>
 
+  <!-- ===================== -->
+  <!-- VERSION ROADMAP -->
+  <!-- ===================== -->
   <div class="doc-block">
-    <h3>Features (M0.6)</h3>
+    <h3>Version Roadmap</h3>
     <ul>
-      <li>Text-to-speech with emotions</li>
-      <li>Custom tone control</li>
-      <li>Dark mode</li>
-      <li>Dashboard UI</li>
+      <li><strong>M0.1 – M0.3:</strong> Core text-to-speech using Web Speech API</li>
+      <li><strong>M0.4 – M0.5:</strong> Tone & emotion controls</li>
+      <li><strong>M0.6:</strong> UI polish, dark mode, basic dashboard</li>
+      <li><strong>M0.7:</strong> Waveform visualization & analyzer</li>
+      <li><strong>M0.8:</strong> Advanced emotion blending (fake custom voices)</li>
+      <li><strong>M0.9:</strong> Voice modeling simulation & profile export</li>
     </ul>
   </div>
 
+  <!-- ===================== -->
+  <!-- FEATURES BY VERSION -->
+  <!-- ===================== -->
   <div class="doc-block">
-    <h3>Upcoming (M0.7 - M0.9)</h3>
+    <h3>Key Features (Up to M0.9)</h3>
     <ul>
-      <li>Waveform preview (M0.7)</li>
-      <li>Voice cloning upload (M0.7/M0.8)</li>
-      <li>API + account tiers (M0.9)</li>
+      <li>Text-to-speech with pitch, rate, emotion</li>
+      <li>Emotion analyzer (keyword-based)</li>
+      <li>Live waveform animation</li>
+      <li>Preset & history system (local)</li>
+      <li>Advanced emotion blending (A + B)</li>
+      <li>Fake ML similarity score</li>
+      <li>Tone & speed tuner graph</li>
+      <li>Auto voice generator (preset styles)</li>
+      <li>Voice profile export (JSON)</li>
     </ul>
   </div>
 
+  <!-- ===================== -->
+  <!-- VOICE MODELING (M0.9) -->
+  <!-- ===================== -->
+  <div class="doc-block">
+    <h3>Voice Modeling (M0.9)</h3>
+    <p>
+      M0.9 introduces a <strong>frontend-only voice modeling simulation</strong>.
+      No real AI training occurs in this version.
+    </p>
+    <ul>
+      <li>Similarity score (fake ML heuristic)</li>
+      <li>Auto voice styles (Deep Male, Clear Female, etc.)</li>
+      <li>Sample upload (UI validation only)</li>
+      <li>Exportable voice profile (JSON)</li>
+    </ul>
+    <p class="muted small">
+      ⚠️ Voice cloning is NOT real yet — this stage validates user behavior and UX.
+    </p>
+  </div>
+
+  <!-- ===================== -->
+  <!-- DASHBOARD -->
+  <!-- ===================== -->
+  <div class="doc-block">
+    <h3>Dashboard</h3>
+    <p>
+      The dashboard provides a user-centric overview of voice activity and profiles.
+    </p>
+    <ul>
+      <li>Usage stats (local)</li>
+      <li>Saved voice presets</li>
+      <li>Exported profiles</li>
+      <li>Future billing & API hooks</li>
+    </ul>
+  </div>
+
+  <!-- ===================== -->
+  <!-- WHAT'S NEXT -->
+  <!-- ===================== -->
+  <div class="doc-block">
+    <h3>What Comes After M0.9?</h3>
+    <p>
+      <strong>M1.0</strong> will introduce backend systems:
+    </p>
+    <ul>
+      <li>User accounts & authentication</li>
+      <li>Real TTS backend (Google / Azure / custom)</li>
+      <li>Actual voice cloning models</li>
+      <li>API access & usage limits</li>
+    </ul>
+    <p class="muted small">
+      Backend work starts only after real user validation.
+    </p>
+  </div>
 </section>
 
-<script src="app.js"></script>
+<script src="app.core.js"></script>
 </body>
 </html>
