@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
 <nav class="navbar">
     <div class="logo">MyTone AI</div>
 
@@ -19,18 +18,12 @@
     <ul class="navMenu" id="nav-links">
       <li><a href="home.html" class="active">Home</a></li>
       <li><a href="index.html">Voice App</a></li>
-      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#">Dashboard</a></li>
       <li><a href="docs.html">Docs</a></li>
       
     <button id="modeToggle" class="btn-secondary">🌙 Dark Mode</button>
     </ul>
   </nav>
-
-<main class="container" style="padding-top:24px;">
-
-  <!-- ===================== -->
-  <!-- SUMMARY -->
-  <!-- ===================== -->
   <section class="dashboard-section">
     <h2>Overview</h2>
 
@@ -104,8 +97,6 @@
     </div>
   </section>
 
-</main>
-
 <footer class="footer">
   <p>© 2025 MyTone AI — Dashboard M0.9</p>
 </footer>
@@ -124,7 +115,29 @@ const history = load('mytone_history_v0.7');
 const presets = load('mytone_presets_v0.7');
 const blends  = load('mytone_blends_v0.8');
 
+const hamburgerBtn = $('hamburgerBtn');
+const navLinks = $('nav-links');
 const modeToggle = $('modeToggle');
+
+// ---------- NAVBAR / HAMBURGER ----------
+if (hamburgerBtn && navLinks) {
+  hamburgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburgerBtn.classList.toggle('active');
+  });
+
+  // close when clicking a nav link
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open'); hamburgerBtn.classList.remove('active');
+  }));
+
+  // click outside closes
+  document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+      navLinks.classList.remove('open'); hamburgerBtn.classList.remove('active');
+    }
+  });
+}
 
 // ---------- THEME (persist) ----------
 (function initTheme(){
@@ -204,4 +217,3 @@ $('clearDataBtn').addEventListener('click', () => {
 </script>
 </body>
 </html>
-
