@@ -25,6 +25,9 @@
     </ul>
   </nav>
   <section class="dashboard-section">
+
+    <h2 id="welcomeUser">Welcome 👋</h2>
+
     <h2>Overview</h2>
 
     <div class="dashboard-grid">
@@ -119,6 +122,8 @@ const hamburgerBtn = $('hamburgerBtn');
 const navLinks = $('nav-links');
 const modeToggle = $('modeToggle');
 
+
+
 // ---------- NAVBAR / HAMBURGER ----------
 if (hamburgerBtn && navLinks) {
   hamburgerBtn.addEventListener('click', () => {
@@ -153,6 +158,18 @@ if (modeToggle) {
     try { localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); } catch(e){}
     modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
   });
+}
+
+const welcomeUser = document.getElementById("welcomeUser");
+const storedUser = localStorage.getItem("mytone_user");
+const openSignup = document.getElementById("openSignup");
+
+if (welcomeUser && storedUser) {
+  welcomeUser.textContent = `Welcome, ${storedUser} 👋`;
+}
+
+if (openSignup && localStorage.getItem("mytone_user")) {
+  window.location.href = "dashboard.html";
 }
 
 /* ------------------------------
